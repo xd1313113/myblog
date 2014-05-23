@@ -1,0 +1,67 @@
+﻿{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Di Xiao's blog</title>
+<script src="" type="text/javascript">
+
+</script>
+
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+<link href="{% static "css/reset.css" %}" rel="stylesheet"/>
+<link href="{% static "css/generic.css" %}" rel="stylesheet"/>
+<link href="{% static "css/style.css" %}" rel="stylesheet" />
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="header">
+		<h1 id="blog-title"><a href="#" rel="home" title="Di Xiao">Di | Blog</a></h1>
+		<div id="blog-description">
+			Coding for creating a new world!</div>
+	</div>
+	<div id="left">
+		<div id="nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Photos</a></li>
+				<li><a href="#">Resume</a></li>
+				<li><a href="#">About Me</a></li>
+			</ul>
+		</div>
+		<div id="edu">
+			<h4>Education</h4>
+			<div class="school">
+			<h6><a href="http://www.vanderbilt.edu">Vanderbilt University</a></h6>
+			</div>
+			<div class="school">
+			<h6><a href="http://www.xjtu.edu.cn">Xi'an Jiaotong University</a></h6>
+			</div>
+		</div>
+		<div id="contact"></div>
+		<div id="social"></div>
+	</div>
+	<div id="right">
+	
+	{% if posts%}
+		{% for post in posts%}
+			<div class="post {{ post.type }}">
+				<div>{{post.content}}</div>
+			</div>
+		{% endfor %}
+	{% else %}
+    <p>No Posts are available.</p>
+	{% endif %}
+	</div>
+	<div id="footer">
+	</div>
+</div>
+
+</body>
+
+</html>

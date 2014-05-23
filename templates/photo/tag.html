@@ -1,0 +1,131 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link href="{% static "css/reset.css" %}" rel="stylesheet"/>
+<link href="{% static "css/generic.css" %}" rel="stylesheet"/>
+<link href="{% static "css/gallerystyle.css" %}" rel="stylesheet" />
+
+<!--<link href="css/print.css" rel="stylesheet"/> -->
+
+<title>Di|Photo</title>
+</head>
+
+<body class="archive category">
+<div id="wrapper">
+	<div id="header">
+		<h1 id="blog-title"><a href="#" title="Di | PHOTO" rel="home">Di | PHOTO</a></h1>
+		<div id="blog-description">Footprint of Life!</div>
+	</div><!--  #header -->
+	
+	<div id="access">
+		<div id="menu"><ul>
+			<li class="page_item"><a href="#" title="Di | PHOTO" rel="home">Home</a></li>
+			<li class="page_item"><a href="http://blog.xd1313113.com">My Blog</a></li>
+			<li class="page_item"><a href="http://">Di @ US</a></li>
+		</ul></div>	
+	</div><!-- #access -->
+	<div id="container">
+		<div id="content">
+			<div id="nav-above" class="navigation">
+			{% if images.object_list and images.paginator.num_pages > 1 %}
+				<div class="nav-previous">
+				{% if images.has_previous %}
+					<a href="?page={{ images.previous_page_number }}" ><span class="meta-nav">&laquo;</span></a>
+				{% endif %}
+				</div>
+				<div class="nav-next">
+				{% if images.has_next %}
+					<a href="?page={{ images.previous_page_number }}" ><span class="meta-nav">&raquo;</span></a>
+				{% endif %}
+				</div>
+			{% endif %}
+			</div>
+			<div class="comment-count">
+				<h2 class="page-title"><span>My Meals</span></h2>
+			</div>
+			<div class="archive-meta"></div>
+			
+			
+			{% for image in images.object_list %}
+			<div id="post-{{image.id}}" class="{{image.css_class}}">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-02-19T13:46:14-0400">{{image.created}}</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="/photo/image/{{image.id }}" title="Permalink to Fried chicken and beer" rel="bookmark"><span>Fried chicken and beer</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Fried chicken and beer</h4>
+					<p>Combo for watching &#8220;My love from star&#8221;</p>
+				</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('{{media_url}}{{image.image.name}}') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+			{% endfor%}
+			
+			{% for image in images %}
+			<div id="post-{{image.id}}" class="{{image.css_class}}">
+
+				<div class="preview">
+					<div class="entry-date bigdate"><abbr class="published" title="2014-02-19T13:46:14-0400">{{image.created}}</abbr></div>
+					<h2 class="entry-title post-content-title"><a href="/photo/image/{{image.id }}" title="Permalink to Fried chicken and beer" rel="bookmark"><span>Fried chicken and beer</span></a></h2>
+					<div class="entry-content post-content">
+						<h4>Fried chicken and beer</h4>
+						<p>
+						Combo for watching &#8220;My love from star&#8221;
+						</p>
+
+					</div>
+					<span class="attach-post-image" style="height:300px;display:block;background:url('{{media_url}}{{image.image.name}}') center center repeat; background-size:cover ">&nbsp;</span>
+				</div><!-- .preview -->
+
+				<div class="entry-meta">
+					<span class="author vcard">By <a class="url fn n" href="http://pic.changecong.com/author/changecong/" title="View all posts by changecong">changecong</a></span>
+					<br />
+					<span class="cat-links">Also posted in <a href="http://pic.changecong.com/category/life/" title="View all posts in Life" rel="category tag">Life</a></span>
+					<br />
+										<span class="comments-link"><a href="http://pic.changecong.com/2014/02/19/fried-chicken-and-beer/#respond" title="Comment on Fried chicken and beer">Comments (0)</a></span>
+				</div>
+		
+			</div><!-- .post -->
+			{% endfor%}
+			<div id="post-245" class="hentry p2 post publish author-changecong category-life category-my-meals tag- y2014 m02 d19 h09">
+
+				<div class="preview">
+					<div class="entry-date bigdate"><abbr class="published" title="2014-02-19T13:46:14-0400">19 Feb</abbr></div>
+					<h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/02/19/fried-chicken-and-beer/" title="Permalink to Fried chicken and beer" rel="bookmark"><span>Fried chicken and beer</span></a></h2>
+					<div class="entry-content post-content">
+						<h4>Fried chicken and beer</h4>
+						<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+						<p>
+Combo for watching &#8220;My love from star&#8221;
+</p>
+
+											</div>
+					<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/02/20140219-134426-1024x553.jpg') center center repeat; background-size:cover ">&nbsp;</span>
+				</div><!-- .preview -->
+
+				<div class="entry-meta">
+					<span class="author vcard">By <a class="url fn n" href="http://pic.changecong.com/author/changecong/" title="View all posts by changecong">changecong</a></span>
+					<br />
+					<span class="cat-links">Also posted in <a href="http://pic.changecong.com/category/life/" title="View all posts in Life" rel="category tag">Life</a></span>
+					<br />
+										<span class="comments-link"><a href="http://pic.changecong.com/2014/02/19/fried-chicken-and-beer/#respond" title="Comment on Fried chicken and beer">Comments (0)</a></span>
+				</div>
+		
+			</div><!-- .post -->
+			
+
+		</div><!-- #content -->
+	</div><!-- #container -->	
+	<div id="footer">
+		All content is &copy; 2014 by <a href="http://photo.xd1313113.com/" title="Di | PHOTO" rel="home">Di | PHOTO</a>. All rights reserved.
+		<p id="footer-credit">
+			<span id="theme-link">Powered by <a href="https://www.djangoproject.com" title="Django"><strong>Django</strong></a> and <a href="http://themesupply.co/themes/autofocus" title="Autofocus"><strong>Autofocus Theme</strong></a></span>
+		</p>
+	</div><!-- #footer -->	
+</div>
+</body>
+
+</html>

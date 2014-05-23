@@ -1,0 +1,227 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link href="{% static "css/reset.css" %}" rel="stylesheet"/>
+<link href="{% static "css/generic.css" %}" rel="stylesheet"/>
+<link href="{% static "css/gallerystyle.css" %}" rel="stylesheet" />
+
+<!--<link href="css/print.css" rel="stylesheet"/> -->
+
+<title>Di|Photo</title>
+</head>
+
+<body class="home">
+<div id="wrapper">
+	<div id="header">
+		<h1 id="blog-title"><a href="#" title="Di | PHOTO" rel="home">Di | PHOTO</a></h1>
+		<div id="blog-description">Footprint of Life!</div>
+	</div><!--  #header -->
+	
+	<div id="access">
+		<div id="menu"><ul>
+			<li class="page_item"><a href="#" title="Di | PHOTO" rel="home">Home</a></li>
+			<li class="page_item"><a href="http://blog.xd1313113.com">My Blog</a></li>
+			<li class="page_item"><a href="http://">Di @ US</a></li>
+		</ul></div>	
+	</div><!-- #access -->
+	<div id="container">
+		<div id="content">
+			<div id="nav-above" class="navigation">
+			{% if images.object_list and images.paginator.num_pages > 1 %}
+				<div class="nav-previous">
+				{% if images.has_previous %}
+					<a href="?page={{ images.previous_page_number }}" ><span class="meta-nav">&laquo;</span></a>
+				{% endif %}
+				</div>
+				<div class="nav-next">
+				{% if images.has_next %}
+					<a href="?page={{ images.previous_page_number }}" ><span class="meta-nav">&raquo;</span></a>
+				{% endif %}
+				</div>
+			{% endif %}
+				<div class="nav-category">	
+					<li class="cat-item cat-item-13"><a href="/photo/tag/Funny/" title="View all posts filed under Funny">Funny</a>
+					</li>
+					<li class="cat-item cat-item-9"><a href="/photo/tag/Life/" title="View all posts filed under Life">Life</a>
+					</li>
+					<li class="cat-item cat-item-2"><a href="/photo/tag/Nature/" title="View all posts filed under My Meals">Nature</a>
+					</li>
+					<li class="cat-item cat-item-6"><a href="/photo/tag/Tech/" title="View all posts filed under Photo">Tech</a>
+					</li>
+					<li class="cat-item cat-item-10"><a href="/photo/tag/Other/" title="View all posts filed under Plant">Other</a>
+					</li>
+					</div>
+			</div>
+			
+			{% for image in images.object_list %}
+			<div id="post-{{image.id}}" class="{{image.css_class}}">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-02-19T13:46:14-0400">{{image.created}}</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="/photo/image/{{image.id }}" title="Permalink to Fried chicken and beer" rel="bookmark"><span>Fried chicken and beer</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Fried chicken and beer</h4>
+					<p>Combo for watching &#8220;My love from star&#8221;</p>
+				</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('{{media_url}}{{image.image.name}}') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+			{% endfor%}
+
+
+
+			<div id="post-238" class="featured hentry p3 post publish author-changecong category-life tag- y2014 m02 d05 h17">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-02-05T21:27:18-0400">05 Feb</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/02/05/after-digging-my-car-out-of-the-snow//#full-photo" title="Permalink to After digging my car out of the snow" rel="bookmark"><span>After digging my car out of the snow</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>After digging my car out of the snow</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+Too much snow
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/02/20140205-212629.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-235" class="featured hentry p4 post publish author-changecong category-photo tag- y2014 m01 d19 h20 alt">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-01-20T00:09:10-0400">20 Jan</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/01/20/honey-orange-tea//#full-photo" title="Permalink to Honey orange tea" rel="bookmark"><span>Honey orange tea</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Honey orange tea</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/01/20140120-000751-1024x553.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-232" class="featured hentry p5 post publish author-changecong category-photo tag- y2014 m01 d15 h16">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-01-15T20:30:49-0400">15 Jan</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/01/15/sprite//#full-photo" title="Permalink to Sprite" rel="bookmark"><span>Sprite</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Sprite</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+Sprite bottle…
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/01/20140115-202947.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-228" class="featured hentry p6 post publish author-changecong category-my-meals tag- y2014 m01 d12 h15 alt">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-01-12T19:37:30-0400">12 Jan</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/01/12/qishan-saozi-noodle//#full-photo" title="Permalink to Qishan Saozi noodle" rel="bookmark"><span>Qishan Saozi noodle</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Qishan Saozi noodle</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+Homemade
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/01/20140112-193331.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-225" class="featured hentry p7 post publish author-changecong category-life category-photo tag- y2014 m01 d01 h12">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-01-01T16:30:45-0400">01 Jan</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2014/01/01/2014%e4%b8%80%e9%a9%ac%e5%bd%93%e5%85%88//#full-photo" title="Permalink to 2014一马当先" rel="bookmark"><span>2014一马当先</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>2014一马当先</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2014/01/20140101-163007.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-221" class="featured hentry p8 post publish author-changecong category-photo category-plant tag- y2013 m12 d25 h13 alt">
+				<div class="entry-date bigdate"><abbr class="published" title="2013-12-25T17:17:59-0400">25 Dec</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2013/12/25/trees-near-the-charles-river//#full-photo" title="Permalink to Trees near the Charles River" rel="bookmark"><span>Trees near the Charles River</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Trees near the Charles River</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+It&#8217;s really cold today~
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2013/12/20131225-171651.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-218" class="featured hentry p9 post publish author-changecong category-my-meals tag- y2013 m12 d20 h20">
+				<div class="entry-date bigdate"><abbr class="published" title="2013-12-21T00:42:41-0400">21 Dec</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2013/12/21/homemade-dishes//#full-photo" title="Permalink to Homemade dishes" rel="bookmark"><span>Homemade dishes</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Homemade dishes</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+Dinner with friends
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2013/12/20131221-004200.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+
+
+			<div id="post-215" class="featured hentry p10 post publish author-changecong category-photo tag- y2013 m12 d19 h07 alt">
+				<div class="entry-date bigdate"><abbr class="published" title="2013-12-19T11:14:01-0400">19 Dec</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="http://pic.changecong.com/2013/12/19/frozen-charles-river//#full-photo" title="Permalink to Frozen Charles River" rel="bookmark"><span>Frozen Charles River</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>Frozen Charles River</h4>
+					<div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/0911199c912d379f8eaea177b0746fe4?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /></div>
+					<p>
+Footprints on the ice over the river.
+</p>
+
+								</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('http://pic.changecong.com/wp-content/uploads/2013/12/20131219-111137.jpg') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+
+		</div><!-- #content -->
+	</div><!-- #container -->	
+	<div id="footer">
+		All content is &copy; 2014 by <a href="http://photo.xd1313113.com/" title="Di | PHOTO" rel="home">Di | PHOTO</a>. All rights reserved.
+		<p id="footer-credit">
+			<span id="theme-link">Powered by <a href="https://www.djangoproject.com" title="Django"><strong>Django</strong></a> and <a href="http://themesupply.co/themes/autofocus" title="Autofocus"><strong>Autofocus Theme</strong></a></span>
+		</p>
+	</div><!-- #footer -->	
+</div>
+</body>
+
+</html>
