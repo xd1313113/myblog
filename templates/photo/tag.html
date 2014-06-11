@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link href="{% static "css/reset.css" %}" rel="stylesheet"/>
+<link href="{% static "css/generic.css" %}" rel="stylesheet"/>
+<link href="{% static "css/gallerystyle.css" %}" rel="stylesheet" />
+
+<!--<link href="css/print.css" rel="stylesheet"/> -->
+
+<title>Di|Photo</title>
+</head>
+
+<body class="archive category">
+<div id="wrapper">
+	<div id="header">
+		<h1 id="blog-title"><a href="#" title="Di | PHOTO" rel="home">Di | PHOTO</a></h1>
+		<div id="blog-description">Footprint of Life!</div>
+	</div><!--  #header -->
+	
+	<div id="access">
+		<div id="menu"><ul>
+			<li class="page_item"><a href="#" title="Di | PHOTO" rel="home">Home</a></li>
+			<li class="page_item"><a href="http://{{site_url}}/blog/">My Blog</a></li>
+			<li class="page_item"><a href="http://">Di @ US</a></li>
+		</ul></div>	
+	</div><!-- #access -->
+	<div id="container">
+		<div id="content">
+			<div id="nav-above" class="navigation">
+			{% if images.object_list and images.paginator.num_pages > 1 %}
+				<div class="nav-previous">
+				{% if images.has_previous %}
+					<a href="?page={{ images.previous_page_number }}" ><span class="meta-nav">&laquo;</span></a>
+				{% endif %}
+				</div>
+				<div class="nav-next">
+				{% if images.has_next %}
+					<a href="?page={{ images.next_page_number }}" ><span class="meta-nav">&raquo;</span></a>
+				{% endif %}
+				</div>
+			{% endif %}
+			</div>
+			<div class="comment-count">
+				<h2 class="page-title"><span>{{tag_id}}</span></h2>
+			</div>
+			<div class="archive-meta"></div>
+			
+			
+			{% for image in images.object_list %}
+			<div id="post-{{image.id}}" class="{{image.css_class}}">
+				<div class="entry-date bigdate"><abbr class="published" title="2014-02-19T13:46:14-0400">{{image.created}}</abbr></div>
+				
+
+			 <h2 class="entry-title post-content-title"><a href="/gallery/image/{{image.id }}" title="Permalink to Fried chicken and beer" rel="bookmark"><span>{{image.title}}</span></a></h2>
+				<div class="entry-content post-content">
+					<h4>{{image.title }}</h4>
+					<p>{{image.description|safe}}</p>
+				</div>
+				<span class="attach-post-image" style="height:300px;display:block;background:url('{{image.url_z}}') center center repeat; background-size:cover;">&nbsp;</span>
+			</div><!-- .post -->
+			{% endfor%}	
+
+		</div><!-- #content -->
+	</div><!-- #container -->	
+	<div id="footer">
+		All content is &copy; 2014 by <a href="http://www.xd1313113.com/gallery" title="Di | PHOTO" rel="home">Di | PHOTO</a>. All rights reserved.
+		<p id="footer-credit">
+			<span id="theme-link">Powered by <a href="https://www.djangoproject.com" title="Django"><strong>Django</strong></a> and <a href="http://themesupply.co/themes/autofocus" title="Autofocus"><strong>Autofocus Theme</strong></a></span>
+		</p>
+	</div><!-- #footer -->	
+</div>
+</body>
+
+</html>

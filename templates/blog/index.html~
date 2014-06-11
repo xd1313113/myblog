@@ -1,0 +1,393 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Thanks to inspration from http://premiumlayers.com/demos/vcard/#http://premiumlayers.com/demos/vcard/ -->
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="keywords" content="xd1313113 blog" />
+	<meta name="description" content="">
+	<meta name="author" content="Di Xiao">
+
+	<title> Di's Blog</title>
+
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<!-- Google Webfonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800,700italic,600italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Neuton:400,200,300' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="{% static "css/bootstrap.css" %}" rel="stylesheet"/>
+
+	<!-- Theme Styles CSS-->
+	<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet"/>
+	<link rel="stylesheet" href="{% static "css/style.css" %}" />
+	<link rel="stylesheet" href="{% static "css/flexslider.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/nivo-lightbox.css" %}" />
+	<link rel="stylesheet" href="{% static "css/default.css" %}" />
+	<link rel="stylesheet" href="{% static "css/animate.css" %}" />
+	</head>
+<body>
+
+<!-- LOADING MASK -->
+<div id="mask">   
+    <div class="loader">
+        <img src="{% static "img/loading.gif" %}" alt='loading'>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+	<div class="container no-padding">
+		<div class="row">
+			<div class="col-md-3 l-content">
+				<div class="profile-pic">
+					<div class="pic-bg"><img src="{% static "img/profile-avatar.jpg" %}" class="img-responsive" alt=""/>
+					</div>
+					<div>
+						<ul class="social">
+							<li><a href="https://www.facebook.com/di.xiao.583"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-wechat"></i></a></li>
+							<li><a href="https://github.com/xd1313113/"><i class="fa fa-github"></i></a></li>
+							<li><a alt="LinkedIn" href="https://www.linkedin.com/profile/view?id=118292898"><i class="fa fa-linkedin-square"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+				<ul class="navigation">
+					<li><a href="#">Home <i class="fa fa-user"></i></a></li>
+					<li><a href="#">Project <i class="fa fa-briefcase"></i></a></li>
+					<li class="slidercontrol"><a class="nav-photo" href="#">Photo <i class="fa fa-image"></i></a></li>
+					<li><a href="#">Resume <i class="fa fa-file-text"></i></a></li>
+					<li class="slidercontrol"><a  class="nav-blog" href="http://www.xd1313113.com/blog">Blog <i class="fa fa-comment"></i></a></li>
+					<li><a href="#">Contact <i class="fa fa-envelope"></i></a></li>
+				</ul>
+				</nav>
+			</div>
+
+			<div class="col-md-9 r-content">
+				<div class="flexslider">
+					<div class="slides">
+						<!-- SECTION 1 - HOMEPAGE -->
+						<section class="no-display">
+							<div class="profile" id="1">
+								<h2><span>Welcome to My Blog</span><br>Looking for Software Engineer Job.</h2>
+								<div class="sep1"></div>
+								<p>Currently I am a new grad in Masters of Computer Science at the Vanderbilt University specializing in Software Engineering.</p>
+								<p>My strengths are the ability to complete a whole software development life cycle and write reliable maintainable code. 
+								I also have strong algorithm design and problem solving ability.</p>
+								<div class="personal-info col-md-12 no-padding">
+									<div class="sep1"></div>
+									<div>
+										<h4><strong>How to know me better</strong></h4>
+										<ul>
+											<li class="slidercontrol">Check My <strong><a href ="#"class="nav-projects">Projects</a></strong> on the Left</li>
+											<li>Download My <strong>Resume</strong> from <a href="upload/resume_dixiao.pdf">Here</a></li>
+										</ul>
+									</div>
+									<div>
+										<h4><strong>Professional Skills</strong></h4>
+										<div class="services-info">
+										<div class="sep1"></div>
+										<ul>
+											<li class="animated flipInX">
+												<img src="{% static "img/android.png" %}">
+												<div class="skills">
+													<h5><strong>Mobile Programming on Android</strong></h5>
+													<p>Android SDK</p>
+													<p>Android Test Framework</p>
+													<p>Android Profiling</p>
+													
+												</div>												
+											</li>
+											<li class="animated flipInX">
+												<img src="{% static "img/oop.jpg" %}">
+												<div class="skills">
+													<h5><strong>Object Oriented Programming</strong></h5>
+														<p>Java(proficient), C++(proficient), Python(Beginner)</p>
+														<p>Design Patterns.Unit Test and Integration Test.</p>
+														<p>Tools: Git,Eclipse IDE, OS: Linux and Window.</p>
+
+												</div>	
+											</li>
+											<li class="animated flipInX">
+												<img src="{% static "img/mapreducelogo.jpg" %}">
+												<div class="skills">
+													<h5><strong>Hadoop Map Reduce</strong></h5>													
+														<p>Apache Hadoop, Hbase, Pig. Amazon Web Services.</p>
+														<p>Automated Data RTL using Sqoop and Python script.</p>
+														<p>Map Reduce Algorithm Design. DB: Mango DB. MySQL.</p>
+
+												</div>	
+											</li>
+											<li class="animated flipInX">
+												<img src="{% static "img/web.jpg" %}">
+												<div class="skills">
+													<h5><strong>Web Proramming</strong></h5>													
+														<p>HTML, CSS, JavaScript, JSON, XML, SQL</p>
+														<p>Django web framework</p>
+												</div>												
+											</li>										
+										</ul>
+									</div>
+								</div>
+									
+									
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</section>
+						<!-- SECTION 1 - HOMEPAGE -->
+
+						<!-- SECTION 2 - WORKS / PROJECTS / PORTFOLIO -->
+						<section class="no-display">
+							<div class="works" id="2">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-md-5">
+											<h3>Portfolio</h3>
+										</div>
+										<div class="col-md-7">
+											<div class="np-main">
+												<div class="np-controls">
+													<a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+													<a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="portfolio-wrap">
+									<div class="row">
+										<ul id="filter-list" class="clearfix">
+											<li class="filter" data-filter="all"><i class="fa fa-th"></i> All</li>
+											<li class="filter" data-filter="android">Android</li>
+											<li class="filter" data-filter="modeling">Modeling</li>
+											<li class="filter" data-filter="graphics">Graphics</li>
+											<li class="filter" data-filter="others">Others</li>											</ul>
+										<ul id="portfolio">
+											<li class="item android">
+												<div>
+													<h2>CrimeSpot</h2>
+													<a href="https://github.com/xd1313113/CrimeSpot" class="nivo-lbox">
+														<div class="folio-img">
+															<img src="{% static "img/projects/1.jpg" %}" alt="" class="img-responsive">
+															<div class="overlay">
+																<div class="overlay-inner">
+																	<h3>Cool App Design</h3>
+																	<p>branding, logo</p>
+																</div>
+															</div>
+														</div>
+													</a>
+													<div class="project-description">
+														<p>
+														An Android app to provide users the safety information based on GPS.
+														</p>
+														<a href="https://github.com/xd1313113/">Github <i class="fa fa-github"></i></a>
+													</div>
+												</div>
+											</li>
+											<hr>
+											<li class="item modeling">
+												<div>
+													<h2>Mars Rover Modeling</h2>
+													<a href="https://www.youtube.com/watch?v=L9szn1QQfas" class="nivo-lbox">
+														<div class="folio-img">
+															<img src="{% static "img/projects/2.jpg" %}" alt="" class="img-responsive">
+															<div class="overlay">
+																<div class="overlay-inner">
+																	<h3>Cool App Design</h3>
+																	<p>branding, logo</p>
+																</div>
+															</div>
+														</div>
+													</a>
+													<div class="project-description">
+														<p>
+														An Android app to provide users the safety information based on GPS.
+														</p>
+														<a href="https://github.com/xd1313113/">Github <i class="fa fa-github"></i></a>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- SECTION 2 - WORKS / PROJECTS / PORTFOLIO -->
+						<!-- SECTION 3 - PHOTO -->
+						<section class="no-display">
+							<div class="item resume" id="3">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-md-5">
+											<h3>Photo</h3>
+										</div>
+										<div class="col-md-7">
+											<div class="np-main">
+												<div class="np-controls">
+													<a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+													<a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- SECTION 3 - CV / RESUME -->
+
+						<!-- SECTION 4 - CV / RESUME -->
+						<section class="no-display">
+							<div class="item resume" id="3">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-md-5">
+											<h3>Resume</h3>
+										</div>
+										<div class="col-md-7">
+											<div class="np-main">
+												<div class="np-controls">
+													<a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+													<a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="resume-info">
+									<a href="upload/resume_dixiao.pdf">
+                                    Click to Download!           
+                                	</a>
+								</div>
+								<br>
+								<iframe style="width:100%;height:700px" src="https://docs.google.com/document/d/1iFrUdZBbqtrjvPInQBR4ZDnGUgdhGhr9JGnhAArxPIc/pub?embedded=true"></iframe>
+							</div>
+						</section>
+						<!-- SECTION 4 - CV / RESUME -->
+
+						<!-- SECTION 5 - BLOG / NEWS -->
+						<section class="no-display">
+							<div class="item blog" id="4">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-md-5">
+											<h3>Blog</h3>
+										</div>
+										<div class="col-md-7">
+											<div class="np-main">
+												<div class="np-controls">
+													<a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+													<a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="blog-wrap">
+									<div class="link-post">
+										<div class="row">
+											<div>
+												<a href="http://www.xd1313113.com/blog" target="_blank">My Blog has Moved to<br> http://www.xd1313113.com/blog</a>
+											</div>
+										</div>
+									</div>
+									<article>
+										<div class="row">
+											<div class="col-md-5">
+												<img src="images/blog/2.jpg" class="img-responsive" alt=""/>
+											</div>
+											<div class="col-md-7">
+												<h3><a href="./blog-single.html">Standard Post with Image</a></h3>
+												<div class="post-meta">
+													<i class="fa fa-calendar"></i> <a href="#">30 march</a> 
+													<i class="fa fa-user"></i> <a href="#">Admin</a> 
+													<i class="fa fa-comments"></i> <a href="#">10 Comments</a> 
+												</div>
+												<p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</section>
+						<!-- SECTION 5 - BLOG / NEWS -->
+
+						<!-- SECTION 6 - CONTACT -->
+						<section class="no-height">
+							<div class="item contact" id="5">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-md-5">
+											<h3>Contact</h3>
+										</div>
+										<div class="col-md-7">
+											<div class="np-main">
+												<div class="np-controls">
+													<a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+													<a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br>
+								<div class="contact-info">
+									
+									<h4>Contact info</h4>
+									<p>I perfer to be contacted by email.</p>
+									<ul>
+										<li><i class="fa fa-envelope"></i> xd1313113@gmail.com</li>
+									</ul>
+								</div>
+
+								<div class="map">
+									<div class="gmap">
+										<div id="map"></div>
+									</div>
+								</div>
+
+							</div>
+						</section>
+						<!-- SECTION 6 - CONTACT -->
+					</div>
+				</div>
+
+				<!-- FOOTER -->
+				<footer>
+					<div class="row">
+						<div class="col-md-7">
+							<p>Di|Blog &copy; 2014. All Rights Reserved</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- MAIN CONTENT -->
+
+<!-- JavaScript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/jquery.flexslider.js" %}"></script>
+<script src="{% static "js/jquery.easing.js" %}"></script>
+<script src="{% static "js/jquery.mixitup.min.js" %}"></script>
+<script src="{% static "js/nivo-lightbox.min.js" %}"></script>
+<script src="{% static "js/jquery.appear.js" %}"></script>
+<script src="{% static "js/jquery.inview.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="{% static "js/gmaps.js" %}"></script>
+
+</body>
+</html>

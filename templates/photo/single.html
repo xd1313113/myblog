@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link href="{% static "css/reset.css" %}" rel="stylesheet"/>
+<link href="{% static "css/generic.css" %}" rel="stylesheet"/>
+<link href="{% static "css/gallerystyle.css" %}" rel="stylesheet" />
+<!--<link href="css/print.css" rel="stylesheet"/> -->
+
+<title>Di|Photo</title>
+</head>
+
+<body class="single">
+<div id="wrapper">
+	<div id="header">
+		<h1 id="blog-title"><a href="http://www.xd1313113.com/gallery" title="Di | PHOTO" rel="home">Di | PHOTO</a></h1>
+		<div id="blog-description">Footprint of Life!</div>
+	</div><!--  #header -->
+	
+	<div id="access">
+		<div id="menu"><ul>
+			<li class="page_item"><a href="#" title="Di | PHOTO" rel="home">Home</a></li>
+			<li class="page_item"><a href="http://blog.xd1313113.com">My Blog</a></li>
+			<li class="page_item"><a href="http://www.xd1313113.com">Di @ US</a></li>
+		</ul></div>
+	</div><!-- #access -->
+	<div id="container">
+		<div id="content">
+			<div id="nav-above" class="navigation">
+			{% if images.object_list and images.paginator.num_pages > 1 %}
+				<div class="nav-previous">
+				{% if images.has_previous %}
+					<a href="/gallery/?page={{ images.previous_page_number }}" ><span class="meta-nav">&laquo;</span></a>
+				{% endif %}
+				</div>
+				<div class="nav-next">
+				{% if images.has_next %}
+					<a href="/gallery/?page={{ images.previous_page_number }}" ><span class="meta-nav">&raquo;</span></a>
+				{% endif %}
+				</div>
+			{% endif %}
+			</div>
+			
+			<div id="post-245" class="hentry p1 post publish author-changecong category-life category-my-meals tag- y2014 m02 d19 h09">	
+				<div class="full-photo" id="full-photo">
+					<span class="photo-credit">&copy; 2014 changecong | Fried chicken and beer | <br /><a href="http://pic.changecong.com/wp-content/uploads/2014/02/20140219-134426.jpg"></a>
+
+Combo for watching "My love from star"</span>
+					
+					<img width="800" src="{{image.url_o}}" class="attachment-large" alt="20140219-134426.jpg" />				</div>
+
+				
+				<div class="entry-content"></div>
+				<div class="entry-meta"></div>
+			</div><!-- .post -->
+			
+			
+			
+		</div><!-- #content -->
+	</div><!-- #container -->	
+	<div id="footer">
+		All content is &copy; 2014 by <a href="http://www.xd1313113.com/" title="Di | PHOTO" rel="home">Di | PHOTO</a>. All rights reserved.
+		<p id="footer-credit">
+			<span id="theme-link">Powered by <a href="https://www.djangoproject.com" title="Django"><strong>Django</strong></a> and <a href="http://themesupply.co/themes/autofocus" title="Autofocus"><strong>Autofocus Theme</strong></a></span>
+		</p>
+	</div><!-- #footer -->	
+</div>
+</body>
+
+</html>
