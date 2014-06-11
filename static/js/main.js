@@ -1,0 +1,185 @@
+/* Loading Script */
+$(window).load(function() {
+  "use strict";
+    	$(".loader").delay(500).fadeOut();
+    	$("#mask").delay(500).fadeOut("slow");
+    });
+
+/* Flexslider */
+$(window).load(function() {
+  "use strict";
+	$('.flexslider').flexslider({
+		animation: "fade",
+		manualControls: ".navigation li",
+		start: function(slider) {
+			$('.slidercontrol a.nav-photo').click(function(event){
+				event.preventDefault();
+				window.location.href = "http://www.xd1313113.com/photo";
+			});
+
+			$('.slidercontrol a.nav-blog').click(function(event){
+				event.preventDefault();
+				window.location.href = "http://www.xd1313113.com/blog";
+			});
+			$('.slidercontrol a.nav-projects').click(function(event){
+				event.preventDefault();
+				slider.flexAnimate(slider.getTarget("next"));
+			});
+
+			$('.np-controls a.next').click(function(event){
+				event.preventDefault();
+				slider.flexAnimate(slider.getTarget("next"));
+			});
+			$('.np-controls a.previous').click(function(event){
+				event.preventDefault();
+				slider.flexAnimate(slider.getTarget("previous"));
+			});
+		}
+	});
+});
+
+/* Mixitup Portfolio */
+jQuery(document).ready(function($) {
+  "use strict";
+	$('#portfolio').mixitup({
+		targetSelector: '.item',
+		transitionSpeed: 450
+	});
+});
+
+/* Nivo - Lightbox */
+jQuery(document).ready(function($) {
+  "use strict";
+    $('.nivo-lbox').nivoLightbox({ 
+    	effect: 'fade',
+    	keyboardNav: false
+    });
+});
+
+/* Skills */
+jQuery(document).ready(function($) {
+	"use strict";
+	$('.skills-info').appear(function() {
+	$('.skill1').css('width', '71%');
+	$('.skill2').css('width', '85%');
+	$('.skill3').css('width', '76%');
+	$('.skill4').css('width', '53%');
+	$('.skill5').css('width', '69%');
+	},{accX: 0, accY: -150});
+});
+
+/* Google map */
+$(function () {
+  "use strict";
+	var map = new GMaps({
+	el: "#map",
+	lat: 36.144375,
+	lng: -86.802744,
+          zoom: 13, 
+          zoomControl : true,
+          zoomControlOpt: {
+            style : "BIG",
+            position: "TOP_LEFT"
+          },
+          panControl : true,
+          streetViewControl : false,
+          mapTypeControl: false,
+          overviewMapControl: false
+      });
+
+      map.addMarker({
+        lat: 36.144375,
+        lng: -86.802744
+      });
+});
+
+/*Animations*/
+$(window).scroll(function() {
+	$('.profile h2').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated fadeInDown");
+		}
+	});
+});
+
+$(window).scroll(function() {
+	$('.profile p').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated fadeInDown");
+		}
+	});
+});
+
+$(window).scroll(function() {
+	$('.personal-info').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});		
+
+$(window).scroll(function() {
+	$('#portfolio .item').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});	
+
+$(window).scroll(function() {
+	$('.page-head').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated fadeInDown");
+		}
+	});
+});	
+
+$(window).scroll(function() {
+	$('.resume-info').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated slideInLeft");
+		}
+	});
+});	
+
+$(window).scroll(function() {
+	$('.services-info li').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});	
+
+$(window).scroll(function() {
+	$('article').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});	
+
+$(window).scroll(function() {
+	$('.contact-form').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated fadeInUp");
+		}
+	});
+});	
